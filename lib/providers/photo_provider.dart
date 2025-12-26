@@ -15,11 +15,12 @@ class PhotoProvider extends ChangeNotifier {
     final data = await _api.getPhotos();
 
     photos = data.map<PhotoModel>((item) {
+      final src = item['src'];
       return PhotoModel(
         id: item["id"],
-        title: item["title"],
-        url: item["url"],
-        thumbnailUrl: item["thumbnailUrl"],
+        title: item["alt"],
+        url: src["large"],
+        thumbnailUrl: src["small"],
       );
     }).toList();
 
@@ -27,3 +28,4 @@ class PhotoProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+

@@ -11,3 +11,5 @@ class PhotoModel {
     required this.thumbnailUrl,
   });
 }
+
+
