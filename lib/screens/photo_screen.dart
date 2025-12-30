@@ -21,7 +21,7 @@ class _PhotosScreenState extends State<PhotosScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Get api")),
+      appBar: AppBar(backgroundColor: Colors.deepPurple,  centerTitle: true,title: const Text("Get api")),
 
       body: Consumer<PhotosProvider>(
         builder: (context, vm, _) {
