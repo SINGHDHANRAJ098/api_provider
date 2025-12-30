@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_ecom/providers/photo_provider.dart';
+import 'package:provider_ecom/providers/phots_provider.dart';
 import 'package:provider_ecom/providers/video_provider.dart';
 import 'package:provider_ecom/screens/home_screen.dart';
+import 'package:provider_ecom/screens/photo_screen.dart';
 import 'package:provider_ecom/screens/video_screen.dart';
 
 void main() {
@@ -15,10 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => VideoProvider(),
+      create: (_) => PhotosProvider(),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: VideoScreen(),
+        home: PhotosScreen(),
       ),
     );
   }
