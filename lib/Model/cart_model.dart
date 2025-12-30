@@ -18,7 +18,15 @@ class CartModel {
     required this.totalProducts,
     required this.totalQuantity,
   });
-
-
-
+  factory CartModel.formJson(Map<String, dynamic> json) {
+    return CartModel(
+      id: json['id'],
+      products: (json['products'] as List).map((p) => ProductModel.fromJson(p)).toList(),
+      total: json['total'],
+      discountedTotal: json['discountedTotal'],
+      userId: json['userId'],
+      totalProducts: json['totalProducts'],
+      totalQuantity: json['totalQuantity'],
+    );
+  }
 }
