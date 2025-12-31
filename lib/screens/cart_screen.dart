@@ -316,7 +316,7 @@ class CartsScreen extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
         title: Text(
-          "Cart List",
+          "Cart list",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

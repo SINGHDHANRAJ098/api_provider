@@ -12,9 +12,7 @@ class ImageDetailScreen extends StatelessWidget {
         final product = provider.product;
 
         if (product == null) {
-          return  Scaffold(
-            body: Center(child: Text("No product selected")),
-          );
+          return Scaffold(body: Center(child: Text("no product")));
         }
 
         return Scaffold(
@@ -40,7 +38,7 @@ class ImageDetailScreen extends StatelessWidget {
                 SizedBox(height: 18),
                 Text(
                   product.title,
-                  textAlign: TextAlign.center,
+
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
                 ),
                 SizedBox(height: 10),
